@@ -30,7 +30,11 @@ class classifier:
                 train_test_split(train, self.labels, test_size=0.25, random_state=39, stratify=self.labels)
             for classifier in self.classifiers:
                 classifier.fit(i_train, l_train)
+                prediction = classifier.predict(i_test)
+                print(f""" Confusion matrix: \n {metrics.confusion_matrix(l_test, prediction)} \n
+                        {metrics.f1_score(l_test, prediction, average=None)}
+                """)
                 print(classifier.score(i_test, l_test))
                 # apply model to test date
                 # measure accuracy
-                # confusion matrix!!!!
+                # confusion matrix!!!!1
