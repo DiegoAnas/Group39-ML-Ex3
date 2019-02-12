@@ -71,16 +71,21 @@ print("Extracting features using PIL/PILLOW" + " (" + str(datetime.datetime.now(
 # Next, we extract a few more features using OpenCV
 
 print("Extracting features using OpenCV" + " (" + str(datetime.datetime.now()) + ")")
-dataOpenCV_1D = []
-dataOpenCV_2D = []
+#dataOpenCV_1D = []
+#dataOpenCV_2D = []
 dataOpenCV_3D = []
 
 for fileName in fileNames:
     extractor = featureExtractor.featureExtractor(imagePath, fileName)
-    features:Tuple = extractor.histogramFeatures()
-    dataOpenCV_1D.append(features[0])
-    dataOpenCV_2D.append(features[1])
-    dataOpenCV_3D.append(features[2])
+    dataOpenCV_3D.append(extractor.histFeature3D())
+    #features:Tuple = extractor.histogramFeatures()
+    #dataOpenCV_1D.append(features[0])
+    #dataOpenCV_2D.append(features[1])
+    #dataOpenCV_3D.append(features[2])
 
 print (".... done" + " (" + str(datetime.datetime.now()) + ")")
 
+# trainingSets = [dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D]
+trainingSets = [ dataOpenCV_3D]
+clf = classifier.classifier(trainingSets, target)
+clf.classify()

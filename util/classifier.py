@@ -12,19 +12,25 @@ from sklearn import ensemble
 from sklearn import svm
 
 class classifier:
-    def __init__(self, trainingSets:List[List]):
+    def __init__(self, trainingSets:List[List], labels:List[int]):
         self.trainingSets = trainingSets
+        self.labels = labels
         self.classifiers = [
-            neighbors.KNeighborsClassifier(),
-            naive_bayes.GaussianNB(),
-            tree.DecisionTreeClassifier(),
+            # neighbors.KNeighborsClassifier(),
+            # naive_bayes.GaussianNB(),
+            # tree.DecisionTreeClassifier(),
             ensemble.RandomForestClassifier(),
-            svm.SVC(),
-            svm.LinearSVC(),
+            # svm.SVC(),
+            # svm.LinearSVC(),
         ]
 
     def classify(self):
         for index, train in enumerate(self.trainingSets):
+            i_train, i_test, l_train, l_test = \
+                train_test_split(train, self.labels, test_size=0.25, random_state=39, stratify=self.labels)
             for classifier in self.classifiers:
-                pass
-        # do the classification here ....
+                classifier.fit(i_train, l_train)
+                print(classifier.score(i_test, l_test))
+                # apply model to test date
+                # measure accuracy
+                # confusion matrix!!!!
