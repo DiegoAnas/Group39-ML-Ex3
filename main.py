@@ -2,16 +2,18 @@ import glob, os, platform
 from typing import List, Tuple
 from sklearn import preprocessing
 from util import demoPlot, FeatureExtractor, classifier
+from util.classifiers import BagWords
 import cv2
 import numpy as np
 from PIL import Image
 import datetime
 from BoVW import *
+from timeit import default_timer
 
 
 class Ex3ML:
     @staticmethod
-    def preprocess(self, imagePath:str) -> Tuple[List[str], List[int]]:
+    def preprocess(imagePath:str) -> Tuple[List[str], List[int]]:
 
         ## Create the create the ground truth (label assignment, target, ...)
         imagePath = "FIDS30/"  # path to our image folder
@@ -49,27 +51,57 @@ class Ex3ML:
         print("... done label encoding")
         return fileNames, target
 
+    @staticmethod
+    def experimentPIL(fileNames: List[str], labels: List[int]):
+        print("Extracting features using PIL.\n")
+        startTimeSeconds = default_timer()
+        dataPIL = []
+        for fileName in fileNames:
+            extractor = FeatureExtractor.FeatureExtractor(imagePath, fileName)
+            dataPIL.append(extractor.featureVectorPIL())
+
+        elapsedTimeSeconds = default_timer() - startTimeSeconds
+        print(f"Time to extract histogram features using PIL: {elapsedTimeSeconds}")
+        print(f"Names {np.shape(fileNames)} ")
+        print(f"data {np.shape(dataPIL)} ")
+        print(f"labels {np.shape(labels)} ")
+        clf = classifier.classifier(dataPIL, labels)
+        clf.classify()
+
+    @staticmethod
+    def experimentCVHist(fileNames: List[str], labels: List[int]):
+        print("Extracting features using OpenCV.\n")
+        startTimeSeconds = default_timer()
+        dataOpenCV_1D = []
+        dataOpenCV_2D = []
+        dataOpenCV_3D = []
+        for fileName in fileNames:
+            extractor = FeatureExtractor.FeatureExtractor(imagePath, fileName)
+            dataOpenCV_1D.append(extractor.histFeature1D())
+            dataOpenCV_2D.append(extractor.histFeature2D())
+            dataOpenCV_3D.append(extractor.histFeature3D())
+
+        elapsedTimeSeconds = default_timer() - startTimeSeconds
+        print(f"Time to extract histogram features using OpenCV: {elapsedTimeSeconds}")
+        trainingSets = [dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D]
+        clf = classifier.classifier(trainingSets, labels)
+        clf.classify()
+
+    @staticmethod
+    def experimentVisualBagOfWords(fileNames: List[str], labels: List[int]):
+        bag = BagWords.BagOfWords(fileNames, labels)
+        bag.run()
 
 if __name__ == "__main__":
 
     imagePath = "FIDS30/"
-    fileNames, target = Ex3ML.preprocess(imagePath)
+    fileNames, labels = Ex3ML.preprocess(imagePath)
+
     # Example plots moved to another file
     #demoPlot.main(imagePath + fileNames[1])
 
-    dataPIL = []
-    #dataOpenCV_1D = []
-    #dataOpenCV_2D = []
-    #dataOpenCV_3D = []
-    dataSift = []
-    for fileName in fileNames:
-        extractor = FeatureExtractor.FeatureExtractor(imagePath, fileName)
-        dataPIL.append(extractor.histogramFeaturesPIL())
-        #dataOpenCV_3D.append(extractor.histFeature3D())
-        #dataSift.append(extractor.extractSiftFeatures())
+    #TODO parsing commands
 
-    print (".... done" + " (" + str(datetime.datetime.now()) + ")")
-
-    trainingSets = [dataPIL]
-    clf = classifier.classifier(trainingSets, target)
-    clf.classify()
+    Ex3ML.experimentPIL(fileNames, labels)
+    Ex3ML.experimentCVHist(fileNames, labels)
+    Ex3ML.experimentVisualBagOfWords(fileNames, labels)

@@ -2,7 +2,7 @@ from typing import List, Tuple
 import cv2
 import numpy as np
 from PIL import Image
-
+import os
 
 def flatten(l):
     return [item for sublist in l for item in sublist]
@@ -15,7 +15,8 @@ class FeatureExtractor:
 
         # However, we have the same issue as before, and it is more difficult in OpenCV to convert to an RGB image
         # Thus we do this using PIL, and then convert to OpenCV ....
-        self.imagePIL = Image.open(imagePath + fileName)
+        #self.imagePIL = Image.open(imagePath + fileName)
+        self.imagePIL = Image.open(fileName)
         self.imagePIL = self.imagePIL.convert('RGB')
         self.imageOpenCV = np.array(self.imagePIL)
         # Convert RGB to BGR
@@ -27,9 +28,9 @@ class FeatureExtractor:
 
     def featureVectorPIL(self):
         # histogram over each RGB channel
-        return self.imagePIL.historgram()
+        return self.imagePIL.histogram()
 
-    def histogramFeaturesPIL(self):
+    def histogramFeaturesCV(self):
         featureVector1D = self.histFeature1D()
         featureVector2D = self.histFeature2D()
         featureVector3D = self.histFeature3D()

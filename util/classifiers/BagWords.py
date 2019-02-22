@@ -4,6 +4,8 @@ from ..FeatureExtractor import FeatureExtractor
 from sklearn.model_selection import train_test_split
 import cv2
 import numpy as np
+from sklearn import metrics
+from timeit import default_timer
 
 class BagOfWords:
     def __init__(self, fileNames: List[str], target: List[int]):
@@ -12,17 +14,18 @@ class BagOfWords:
         self.descriptors = None
         self.no_clusters = 100      # No idea what number
         self.bov_helper = BOVHelpers(self.no_clusters)
+        #self.bov_helper = BOVHelpers(self.no_clusters, ensemble.RandomForestClassifier(random_state=39))
         pass
 
-    def work(self):
+    def run(self):
         self.getDescriptors()
         train_descriptors, test_descriptors, train_labels, test_labels = \
             train_test_split(self.descriptors, self.labels, test_size=0.25, random_state=39, stratify=self.labels)
         self.trainModel(train_descriptors, len(train_descriptors), train_labels)
         self.testModel(test_descriptors, test_labels)
-        pass
 
     def getDescriptors(self):
+        startTimeSeconds = default_timer()
         descriptors = []
         sift = cv2.xfeatures2d.SIFT_create()
         for file in self.fileNames:
@@ -30,16 +33,20 @@ class BagOfWords:
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             kp, des = sift.detectAndCompute(gray, None)
             descriptors.append(des)
+
+        elapsedTimeSeconds = default_timer() - startTimeSeconds
+        print(f"Time to extract SIFT descriptors: {elapsedTimeSeconds}")
         self.descriptors = descriptors
-        pass
 
     def trainModel(self, descriptors, imageCount, labels):
+        startTimeSeconds = default_timer()
         self.bov_helper.formatND(self.descriptors)
         self.bov_helper.cluster()
         self.bov_helper.developVocabulary(n_images = imageCount, descriptor_list=self.descriptors)
         self.bov_helper.standardize()
         self.bov_helper.train(labels)
-        pass
+        elapsedTimeSeconds = default_timer() - startTimeSeconds
+        print(f"Time to build BoVW model: {elapsedTimeSeconds}")
 
     def predict(self, descriptor):
         # generate vocab for test image
@@ -63,5 +70,14 @@ class BagOfWords:
         return predictedLabel
 
     def testModel(self, descriptors, imageCount, labels):
-        #Not implemented
-        pass
+        print("Testing BoVW model.\n")
+        startTimeSeconds = default_timer()
+        predictions: List[int] = []
+        for i in range(imageCount):
+            predictions[i] = self.predict(descriptors[i])
+        elapsedTimeSeconds = default_timer() - startTimeSeconds
+        print(f"Time for prediction using BoVW: {elapsedTimeSeconds}")
+        print(f"""Overall F1 score: {metrics.f1_score(labels, predictions, average='micro')} \n 
+                Per class F1 score: \n {metrics.f1_score(labels, predictions, average=None)}\n
+                Confusion Matrix: \n {metrics.confusion_matrix(labels, predictions)}\n """)
+
