@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 import os
 
+
 def flatten(l):
     return [item for sublist in l for item in sublist]
 

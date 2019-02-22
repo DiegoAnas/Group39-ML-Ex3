@@ -31,13 +31,12 @@ class classifier:
     def classify(self):
         classifierNum = 0
         for index, train in enumerate(self.trainingSets):
-            print(np.shape(train))
-            print(np.shape(self.labels))
             trainingImages, testingImages, trainingLabels, testingLabels = \
                 train_test_split(train, self.labels, test_size=0.3, random_state=39, stratify=self.labels)
             print(f"Set {index}: \n")
             for classifier in self.classifiers:
                 print(f"Classifier {self.names[classifierNum]}\n")
+                classifierNum += 1
                 startTimeSeconds = default_timer()
                 classifier.fit(trainingImages, trainingLabels)
                 elapsedTimeSeconds = default_timer() - startTimeSeconds

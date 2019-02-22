@@ -56,16 +56,27 @@ class Ex3ML:
         print("Extracting features using PIL.\n")
         startTimeSeconds = default_timer()
         dataPIL = []
-        for fileName in fileNames:
-            extractor = FeatureExtractor.FeatureExtractor(imagePath, fileName)
-            dataPIL.append(extractor.featureVectorPIL())
+        for index, fileName in enumerate(fileNames):
+            imagePIL = Image.open(fileName)
+            # Not all images in our dataset are in RGB color scheme (e.g. indexed colours)
+            # We need to make sure that they are RGB , otherwise we can't expect to have exactly three RGB channels..
+            imagePIL = imagePIL.convert('RGB')
+            featureVector = imagePIL.histogram()
+
+            if (len(featureVector) != 768):  # just a sanity check; with the transformation to RGB, this should never happen
+                print(f"Unexpected length of feature vector: { str(len(featureVector)) } in file: { fileName}")
+
+            dataPIL.append(featureVector)
+        # for fileName in fileNames:
+        #     extractor = FeatureExtractor.FeatureExtractor(imagePath, fileName)
+        #     dataPIL.append(extractor.featureVectorPIL())
 
         elapsedTimeSeconds = default_timer() - startTimeSeconds
         print(f"Time to extract histogram features using PIL: {elapsedTimeSeconds}")
-        print(f"Names {np.shape(fileNames)} ")
-        print(f"data {np.shape(dataPIL)} ")
-        print(f"labels {np.shape(labels)} ")
-        clf = classifier.classifier(dataPIL, labels)
+        # print(f"Names {np.shape(fileNames)} ") #971
+        # print(f"data {np.shape(dataPIL)} tipo {type(dataPIL)}")     # (971, 768)
+        # print(f"labels {np.shape(labels)} ")    # 971
+        clf = classifier.classifier([dataPIL], labels)
         clf.classify()
 
     @staticmethod
@@ -83,6 +94,9 @@ class Ex3ML:
 
         elapsedTimeSeconds = default_timer() - startTimeSeconds
         print(f"Time to extract histogram features using OpenCV: {elapsedTimeSeconds}")
+        # print(f"Names {np.shape(fileNames)} ")  # 971
+        # print(f"data 2D {np.shape(dataOpenCV_2D)} tipo {type(dataOpenCV_2D)}")  # (971, 192)
+        # print(f"labels {np.shape(labels)} ")  # 971
         trainingSets = [dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D]
         clf = classifier.classifier(trainingSets, labels)
         clf.classify()
@@ -103,5 +117,5 @@ if __name__ == "__main__":
     #TODO parsing commands
 
     Ex3ML.experimentPIL(fileNames, labels)
-    Ex3ML.experimentCVHist(fileNames, labels)
-    Ex3ML.experimentVisualBagOfWords(fileNames, labels)
+    #Ex3ML.experimentCVHist(fileNames, labels)
+    #Ex3ML.experimentVisualBagOfWords(fileNames, labels)
