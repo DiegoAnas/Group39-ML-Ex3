@@ -145,8 +145,8 @@ class Ex3ML:
         if dataOpenCV_1D == None:
             print("Could not load or build dataset")
         else:
-            trainingSets = [dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D]
-            clf = classifier.classifier(trainingSets, labels)
+            datasets = [dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D]
+            clf = classifier.classifier(datasets, labels)
             clf.classify()
 
     @staticmethod
