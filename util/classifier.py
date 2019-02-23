@@ -13,6 +13,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn import svm
 from timeit import default_timer
 import numpy as np
+import textwrap
 
 class classifier:
     def __init__(self, trainingSets:List[List], labels:List[int]):
@@ -29,14 +30,13 @@ class classifier:
         self.names: List[str]=["Knn","RandomForest","MLP", "SVM"]
 
     def classify(self):
-        classifierNum = 0
-        for index, train in enumerate(self.trainingSets):
+        #TODO replace CrossValidation with K-Fold CV
+        for setIndex, train in enumerate(self.trainingSets):
             trainingImages, testingImages, trainingLabels, testingLabels = \
                 train_test_split(train, self.labels, test_size=0.3, random_state=39, stratify=self.labels)
-            print(f"Set {index}: \n")
-            for classifier in self.classifiers:
-                print(f"Classifier {self.names[classifierNum]}\n")
-                classifierNum += 1
+            print(f"Set {setIndex}: \n")
+            for clfIndex, classifier in  enumerate(self.classifiers):
+                print(f"Classifier {self.names[clfIndex]}\n")
                 startTimeSeconds = default_timer()
                 classifier.fit(trainingImages, trainingLabels)
                 elapsedTimeSeconds = default_timer() - startTimeSeconds
@@ -45,6 +45,6 @@ class classifier:
                 prediction = classifier.predict(testingImages)
                 elapsedTimeSeconds = default_timer() - startTimeSeconds
                 print(f"Time to make predictions: {elapsedTimeSeconds}")
-                print(f"""Overall F1 score: {metrics.f1_score(testingLabels, prediction, average='micro')} \n 
-                        Per class F1 score: \n {metrics.f1_score(testingLabels, prediction, average=None)}\n
-                        Confusion Matrix: \n {metrics.confusion_matrix(testingLabels, prediction)}\n """)
+                print(f"Overall F1 score: {metrics.f1_score(testingLabels, prediction, average='micro')} \n")
+                print(f"Per class F1 score: \n {metrics.f1_score(testingLabels, prediction, average=None)}\n")
+                # print(f"Confusion Matrix: \n {metrics.confusion_matrix(testingLabels, prediction)}\n ")

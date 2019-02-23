@@ -9,12 +9,12 @@ from PIL import Image
 import datetime
 from BoVW import *
 from timeit import default_timer
+import pickle
 
 
 class Ex3ML:
     @staticmethod
     def preprocess(imagePath:str) -> Tuple[List[str], List[int]]:
-
         ## Create the create the ground truth (label assignment, target, ...)
         imagePath = "FIDS30/"  # path to our image folder
         # Find all images in that folder
@@ -27,7 +27,6 @@ class Ex3ML:
         # The first step - create the ground truth (label assignment, target, ...)
         # For that, iterate over the files, and obtain the class label for each file
         # Basically, the class name is in the full path name, so we simply use that
-
         for fileName in fileNames:
             if platform.system() == "Windows":
                 pathSepIndex = fileName.index("\\")
@@ -37,7 +36,6 @@ class Ex3ML:
 
         # sk-learn can only handle labels in numeric format - we have them as strings though...
         # Thus we use the LabelEncoder, which does a mapping to Integer numbers
-
         le = preprocessing.LabelEncoder()
         le.fit(targetLabels)  # this basically finds all unique class names, and assigns them to the numbers
         print("Found the following classes: " + str(list(le.classes_)))
@@ -52,7 +50,7 @@ class Ex3ML:
         return fileNames, target
 
     @staticmethod
-    def experimentPIL(fileNames: List[str], labels: List[int]):
+    def buildPILHist(fileNames: List[str]):
         print("Extracting features using PIL.\n")
         startTimeSeconds = default_timer()
         dataPIL = []
@@ -62,25 +60,43 @@ class Ex3ML:
             # We need to make sure that they are RGB , otherwise we can't expect to have exactly three RGB channels..
             imagePIL = imagePIL.convert('RGB')
             featureVector = imagePIL.histogram()
-
-            if (len(featureVector) != 768):  # just a sanity check; with the transformation to RGB, this should never happen
-                print(f"Unexpected length of feature vector: { str(len(featureVector)) } in file: { fileName}")
-
+            if (len(
+                    featureVector) != 768):  # just a sanity check; with the transformation to RGB, this should never happen
+                print(f"Unexpected length of feature vector: {str(len(featureVector))} in file: {fileName}")
             dataPIL.append(featureVector)
-        # for fileName in fileNames:
-        #     extractor = FeatureExtractor.FeatureExtractor(imagePath, fileName)
-        #     dataPIL.append(extractor.featureVectorPIL())
 
         elapsedTimeSeconds = default_timer() - startTimeSeconds
         print(f"Time to extract histogram features using PIL: {elapsedTimeSeconds}")
-        # print(f"Names {np.shape(fileNames)} ") #971
-        # print(f"data {np.shape(dataPIL)} tipo {type(dataPIL)}")     # (971, 768)
-        # print(f"labels {np.shape(labels)} ")    # 971
+        try:
+            with open('PILHist.data', 'wb') as fp:
+                pickle.dump(dataPIL, fp)
+        except Exception as ex:
+            print(f"Exception occurrred writing files: \n {ex}")
+        return dataPIL
+
+    @staticmethod
+    def loadPILHist():
+        print(f"Loading PIL histogram data from disk")
+        try:
+            with open('PILHist.data', 'rb') as fp:
+                dataPIL = pickle.load(fp)
+        except Exception as ex:
+            print(f"Exception occurrred: \n {ex}")
+            return None, None, None
+        return dataPIL
+
+    @staticmethod
+    def experimentPIL(fileNames: List[str], labels: List[int]):
+        dataPIL = Ex3ML.loadCVHist()
+        if dataPIL == None:
+            dataPIL = Ex3ML.buildPILHist(fileNames)
+        if dataPIL == None:
+            print("Could not load or build dataset")
         clf = classifier.classifier([dataPIL], labels)
         clf.classify()
 
     @staticmethod
-    def experimentCVHist(fileNames: List[str], labels: List[int]):
+    def buildCVHist(fileNames: List[str]):
         print("Extracting features using OpenCV.\n")
         startTimeSeconds = default_timer()
         dataOpenCV_1D = []
@@ -94,12 +110,44 @@ class Ex3ML:
 
         elapsedTimeSeconds = default_timer() - startTimeSeconds
         print(f"Time to extract histogram features using OpenCV: {elapsedTimeSeconds}")
-        # print(f"Names {np.shape(fileNames)} ")  # 971
-        # print(f"data 2D {np.shape(dataOpenCV_2D)} tipo {type(dataOpenCV_2D)}")  # (971, 192)
-        # print(f"labels {np.shape(labels)} ")  # 971
-        trainingSets = [dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D]
-        clf = classifier.classifier(trainingSets, labels)
-        clf.classify()
+        print(f"Writing feature vectors to disk")
+        try:
+            with open('dataOpenCV_1D', 'wb') as fp:
+                pickle.dump(dataOpenCV_1D, fp)
+            with open('dataOpenCV_2D', 'wb') as fp:
+                    pickle.dump(dataOpenCV_2D, fp)
+            with open('dataOpenCV_3D', 'wb') as fp:
+                pickle.dump(dataOpenCV_3D, fp)
+        except Exception as ex:
+            print(f"Exception occurrred writing files: \n {ex}")
+        return dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D
+
+    @staticmethod
+    def loadCVHist():
+        print(f"Loading feature vectors from disk")
+        try:
+            with open('dataOpenCV_1D', 'rb') as fp:
+                dataOpenCV_1D = pickle.load(fp)
+            with open('dataOpenCV_2D', 'rb') as fp:
+                dataOpenCV_2D = pickle.load(fp)
+            with open('dataOpenCV_3D', 'rb') as fp:
+                dataOpenCV_3D = pickle.load(fp)
+        except Exception as ex:
+            print(f"Exception occurrred: \n {ex}")
+            return None, None, None
+        return dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D
+
+    @staticmethod
+    def experimentCVHist(fileNames, labels):
+        dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D = Ex3ML.loadCVHist()
+        if dataOpenCV_1D == None:
+            dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D = Ex3ML.buildCVHist(fileNames)
+        if dataOpenCV_1D == None:
+            print("Could not load or build dataset")
+        else:
+            trainingSets = [dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D]
+            clf = classifier.classifier(trainingSets, labels)
+            clf.classify()
 
     @staticmethod
     def experimentVisualBagOfWords(fileNames: List[str], labels: List[int]):
@@ -116,6 +164,6 @@ if __name__ == "__main__":
 
     #TODO parsing commands
 
-    Ex3ML.experimentPIL(fileNames, labels)
-    #Ex3ML.experimentCVHist(fileNames, labels)
+    #Ex3ML.experimentPIL(fileNames, labels)
+    Ex3ML.experimentCVHist(fileNames, labels)
     #Ex3ML.experimentVisualBagOfWords(fileNames, labels)
