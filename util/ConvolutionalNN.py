@@ -39,7 +39,7 @@ def preprocess(fileNames, colour:bool):
             return img_array
         print("Loading images")
         startTimeSeconds = default_timer()
-        dim = (100, 100)
+        dim = (200, 200)
         images = []
         for fileName in fileNames:
             if colour:
@@ -100,7 +100,7 @@ def experimentCNN(fileNames, labels, colour:bool=True):
     trainingImages, testingImages, trainingLabels, testingLabels = \
         train_test_split(img_array, labels, test_size=0.3, random_state=39, stratify=labels)
 
-    print("Starting conversion")
+    print("Starting training")
     startTimeSeconds = default_timer()
     model = Sequential()
     n_filters = 16
@@ -108,8 +108,9 @@ def experimentCNN(fileNames, labels, colour:bool=True):
 
     # Layer 1
     model.add(Convolution2D(n_filters, 3, 3, border_mode='valid', input_shape=inputShape))
+    # 3 by 3 is kernel size
     # input shape: 100x100 images with 3 channels -> input_shape should be (3, 100, 100)
-    model.add(BatchNormalization())
+    #model.add(BatchNormalization())
     model.add(Activation('relu'))  # ReLu activation
     model.add(MaxPooling2D(pool_size=(2, 2)))  # reducing image resolution by half
     model.add(Dropout(0.3))  # random "deletion" of %-portion of units in each batch
@@ -118,7 +119,7 @@ def experimentCNN(fileNames, labels, colour:bool=True):
     model.add(Convolution2D(n_filters, 3, 3))  # input_shape is only needed in 1st layer
     # model.add(BatchNormalization())
     model.add(Activation('relu'))
-    # model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Dropout(0.3))
     model.add(Flatten())  # Note: Keras does automatic shape inference.
 
