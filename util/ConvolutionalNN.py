@@ -16,6 +16,7 @@ import keras
 from keras.models import Sequential
 from keras.layers import Convolution2D, MaxPooling2D, Dense, Dropout, Activation, Flatten
 from keras.layers.normalization import BatchNormalization
+from keras.preprocessing.image import img_to_array
 
 def loadFromDisk(colour:bool):
     try:
@@ -42,14 +43,14 @@ def preprocess(fileNames, colour:bool):
         images = []
         for fileName in fileNames:
             if colour:
-                imagePIL = Image.open(fileName).convert('L')
+                imagePIL = Image.open(fileName).convert("RGB")
             else:
                 imagePIL = Image.open(fileName).convert('L')  # Open and Turn to grayscale
             res = imagePIL.resize(dim, resample=Image.BICUBIC)
             images.append(np.array(res))  # we convert the images to a Numpy array and store them in a list
+            # print(np.shape(arr))
 
-        print(f"Images {np.shape(images)}")
-        # a list of many 100x100 images is made into 1 big array
+        # a list of many 100x100x3 images is made into 1 big array
         # config.floatX is from Theano configration to enforce float32 precision (needed for GPU computation)
         img_array = np.array(images, dtype=config.floatX)
         print(f"Array {img_array.shape}")
@@ -60,20 +61,18 @@ def preprocess(fileNames, colour:bool):
         elapsedTimeSeconds = default_timer() - startTimeSeconds
         print(f"Time to process all images: {elapsedTimeSeconds}")
 
-        # CONV NN
-        n_channels = 1  # for grey-scale, 3 for RGB, but usually already present in the data
+        if colour:
+            n_channels = 3
+        else:
+            n_channels = 1  # for grey-scale, 3 for RGB, but usually already present in the data
 
         if keras.backend.image_dim_ordering() == 'th':
             # Theano ordering (~/.keras/keras.json: "image_dim_ordering": "th")
             img_array = img_array.reshape(img_array.shape[0], n_channels, img_array.shape[1], img_array.shape[2])
-            # train_img = img_array.reshape(img_array.shape[0], n_channels, img_array.shape[1], img_array.shape[2])
-            # test_img = test_images.reshape(test_images.shape[0], n_channels, test_images.shape[1], test_images.shape[2])
         else:
             # Tensorflow ordering (~/.keras/keras.json: "image_dim_ordering": "tf")
             img_array = img_array.reshape(img_array.shape[0], img_array.shape[1], img_array.shape[2], n_channels)
-            # Fails
-            # train_img = img_array.reshape(img_array.shape[0], img_array.shape[1], img_array.shape[2], n_channels)
-            # test_img = test_images.reshape(test_images.shape[0], test_images.shape[1], test_images.shape[2], n_channels)
+
         try:
             if colour:
                 with open('convertedColourIMG.data', 'wb') as fp:
@@ -92,7 +91,7 @@ def preprocess(fileNames, colour:bool):
 
 def experimentCNN(fileNames, labels, colour:bool=True):
     np.random.seed(39)
-    img_array = preprocess(fileNames,colour)
+    img_array = preprocess(fileNames, colour)
     if img_array is None:
         return None
     inputShape = img_array.shape[1:]

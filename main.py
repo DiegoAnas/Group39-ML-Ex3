@@ -93,9 +93,9 @@ class Ex3ML:
     def experimentPIL(fileNames: List[str], labels:List[int], folds:int,
                       KNN:bool=False, MLP:bool=False, RF:bool=False, SVM:bool=False):
         dataPIL = Ex3ML.loadCVHist()
-        if dataPIL == None:
+        if dataPIL is None:
             dataPIL = Ex3ML.buildPILHist(fileNames)
-        if dataPIL == None:
+        if dataPIL is None:
             print("Could not load or build dataset")
         clf = classifier.classifier([dataPIL], labels, folds=folds, KNN=KNN, MLP=MLP, RF=RF, SVM=SVM)
         clf.classify()
@@ -146,9 +146,9 @@ class Ex3ML:
     def experimentCVHist(fileNames, labels:List[int], folds:int,
                          KNN:bool=False, MLP:bool=False, RF:bool=False, SVM:bool=False):
         dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D = Ex3ML.loadCVHist()
-        if dataOpenCV_1D == None:
+        if dataOpenCV_1D is None:
             dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D = Ex3ML.buildCVHist(fileNames)
-        if dataOpenCV_1D == None:
+        if dataOpenCV_1D is None:
             print("Could not load or build dataset")
         else:
             datasets = [dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D]
@@ -186,7 +186,8 @@ if __name__ == "__main__":
                         help='Test different MLP models')
     parser.add_argument('-f', "--folds", type=int, default=2, action='store', choices=range(2, 10),
                         help='Number of folds for CrossValidation (default 2).')
-
+    parser.add_argument('--gray', action='store_true',
+                        help='Convert images to grayscale (only applies to CNN experiment)')
     args = parser.parse_args()
 
     imagePath = args.imagePath
@@ -204,4 +205,4 @@ if __name__ == "__main__":
     if args.BOVW:
         Ex3ML.experimentVisualBagOfWords(fileNames, labels)
     if args.CNN:
-        ConvolutionalNN.experimentCNN(fileNames, labels, colour=True)
+        ConvolutionalNN.experimentCNN(fileNames, labels, colour=not(args.gray))
