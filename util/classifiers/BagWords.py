@@ -14,6 +14,7 @@ class BagOfWords:
         self.descriptors = None
         self.no_clusters = 100      # No idea what number
         self.bov_helper = BOVHelpers(self.no_clusters)
+        #TODO implement and test different models for BoVW
         #self.bov_helper = BOVHelpers(self.no_clusters, ensemble.RandomForestClassifier(random_state=39))
         pass
 
@@ -77,7 +78,7 @@ class BagOfWords:
             predictions[i] = self.predict(descriptors[i])
         elapsedTimeSeconds = default_timer() - startTimeSeconds
         print(f"Time for prediction using BoVW: {elapsedTimeSeconds}")
-        print(f"""Overall F1 score: {metrics.f1_score(labels, predictions, average='micro')} \n 
-                Per class F1 score: \n {metrics.f1_score(labels, predictions, average=None)}\n
-                Confusion Matrix: \n {metrics.confusion_matrix(labels, predictions)}\n """)
+        print(f"Overall F1 score: {metrics.f1_score(labels, predictions, average='micro')} ")
+        print(f"Per class F1 score: \n {metrics.f1_score(labels, predictions, average=None)}")
+        print(f"Confusion Matrix: \n {metrics.confusion_matrix(labels, predictions)} ")
 

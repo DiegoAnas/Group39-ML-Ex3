@@ -6,10 +6,10 @@ from util.classifiers import BagWords
 import cv2
 import numpy as np
 from PIL import Image
-import datetime
 from BoVW import *
 from timeit import default_timer
-import pickle
+import pickle   # Used for persistence
+import argparse
 
 
 class Ex3ML:
@@ -18,36 +18,40 @@ class Ex3ML:
         ## Create the create the ground truth (label assignment, target, ...)
         imagePath = "FIDS30/"  # path to our image folder
         # Find all images in that folder
-        os.chdir(imagePath)
-        fileNames = glob.glob("*/*.jpg")
-        numberOfFiles = len(fileNames)
-        targetLabels = []
+        try:
+            os.chdir(imagePath)
+            fileNames = glob.glob("*/*.jpg")
+            numberOfFiles = len(fileNames)
+            targetLabels = []
 
-        print("Found " + str(numberOfFiles) + " files\n")
-        # The first step - create the ground truth (label assignment, target, ...)
-        # For that, iterate over the files, and obtain the class label for each file
-        # Basically, the class name is in the full path name, so we simply use that
-        for fileName in fileNames:
-            if platform.system() == "Windows":
-                pathSepIndex = fileName.index("\\")
-            else:
-                pathSepIndex = fileName.index("/")
-            targetLabels.append(fileName[:pathSepIndex])
+            print("Found " + str(numberOfFiles) + " files\n")
+            # The first step - create the ground truth (label assignment, target, ...)
+            # For that, iterate over the files, and obtain the class label for each file
+            # Basically, the class name is in the full path name, so we simply use that
+            for fileName in fileNames:
+                if platform.system() == "Windows":
+                    pathSepIndex = fileName.index("\\")
+                else:
+                    pathSepIndex = fileName.index("/")
+                targetLabels.append(fileName[:pathSepIndex])
 
-        # sk-learn can only handle labels in numeric format - we have them as strings though...
-        # Thus we use the LabelEncoder, which does a mapping to Integer numbers
-        le = preprocessing.LabelEncoder()
-        le.fit(targetLabels)  # this basically finds all unique class names, and assigns them to the numbers
-        print("Found the following classes: " + str(list(le.classes_)))
+            # sk-learn can only handle labels in numeric format - we have them as strings though...
+            # Thus we use the LabelEncoder, which does a mapping to Integer numbers
+            le = preprocessing.LabelEncoder()
+            le.fit(targetLabels)  # this basically finds all unique class names, and assigns them to the numbers
+            print("Found the following classes: " + str(list(le.classes_)))
 
-        # now we transform our labels to integers
-        target = le.transform(targetLabels);
-        print("Transformed labels (first elements: " + str(target[0:150]))
+            # now we transform our labels to integers
+            target = le.transform(targetLabels);
+            print("Transformed labels (first elements: " + str(target[0:150]))
 
-        # If we want to find again the label for an integer value, we can do something like this:
-        # print list(le.inverse_transform([0, 18, 1]))
-        print("... done label encoding")
-        return fileNames, target
+            # If we want to find again the label for an integer value, we can do something like this:
+            # print list(le.inverse_transform([0, 18, 1]))
+            print("... done label encoding")
+            return fileNames, target
+        except Exception as ex:
+            print(f"An exception ocurred {ex}")
+            exit(-1)
 
     @staticmethod
     def buildPILHist(fileNames: List[str]):
@@ -86,13 +90,14 @@ class Ex3ML:
         return dataPIL
 
     @staticmethod
-    def experimentPIL(fileNames: List[str], labels: List[int]):
+    def experimentPIL(fileNames: List[str], labels:List[int], folds:int,
+                      KNN:bool=False, MLP:bool=False, RF:bool=False, SVM:bool=False):
         dataPIL = Ex3ML.loadCVHist()
         if dataPIL == None:
             dataPIL = Ex3ML.buildPILHist(fileNames)
         if dataPIL == None:
             print("Could not load or build dataset")
-        clf = classifier.classifier([dataPIL], labels)
+        clf = classifier.classifier([dataPIL], labels, folds=folds, KNN=KNN, MLP=MLP, RF=RF, SVM=SVM)
         clf.classify()
 
     @staticmethod
@@ -138,7 +143,8 @@ class Ex3ML:
         return dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D
 
     @staticmethod
-    def experimentCVHist(fileNames, labels):
+    def experimentCVHist(fileNames, labels:List[int], folds:int,
+                         KNN:bool=False, MLP:bool=False, RF:bool=False, SVM:bool=False):
         dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D = Ex3ML.loadCVHist()
         if dataOpenCV_1D == None:
             dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D = Ex3ML.buildCVHist(fileNames)
@@ -146,7 +152,7 @@ class Ex3ML:
             print("Could not load or build dataset")
         else:
             datasets = [dataOpenCV_1D, dataOpenCV_2D, dataOpenCV_3D]
-            clf = classifier.classifier(datasets, labels)
+            clf = classifier.classifier(datasets, labels, folds = folds, KNN=KNN, MLP=MLP, RF=RF, SVM=SVM)
             clf.classify()
 
     @staticmethod
@@ -156,14 +162,44 @@ class Ex3ML:
 
 if __name__ == "__main__":
 
-    imagePath = "FIDS30/"
+    parser = argparse.ArgumentParser(
+        prog = "MLEX3",
+        description="Image classfication experiment",
+        epilog = "Application implemented for the 3rd assignment of ML course")
+    parser.add_argument('imagePath', action='store',
+                        help='Path to where the images are stored')
+    parser.add_argument('--openCVHist', action='store_true',
+        help='Perform classification using histogram features from OpenCV')
+    parser.add_argument('--PILHist', action='store_true',
+        help='Perform classification using histogram features from PILLOW')
+    parser.add_argument('--BOVW', action='store_true',
+        help='Perform classification using the Bag of Visual Words method')
+    parser.add_argument('--CNN', action='store_true',
+                        help='Perform classification using Convolutional Neural Network')
+    parser.add_argument('--RF', action='store_true',
+                        help='Test different RandomForest models')
+    parser.add_argument('--SVM', action='store_true',
+                        help='Test different SVM models')
+    parser.add_argument('--KNN', action='store_true',
+                        help='Test different KNN models')
+    parser.add_argument('--MLP', action='store_true',
+                        help='Test different MLP models')
+    parser.add_argument('-f', "--folds", type=int, default=2, action='store', choices=range(2, 10),
+                        help='Number of folds for CrossValidation (default 2).')
+
+    args = parser.parse_args()
+
+    imagePath = args.imagePath
+    #imagePath = "FIDS30/"
     fileNames, labels = Ex3ML.preprocess(imagePath)
+    # TODO parsing commands
 
     # Example plots moved to another file
     #demoPlot.main(imagePath + fileNames[1])
 
-    #TODO parsing commands
-
-    #Ex3ML.experimentPIL(fileNames, labels)
-    Ex3ML.experimentCVHist(fileNames, labels)
-    #Ex3ML.experimentVisualBagOfWords(fileNames, labels)
+    if args.PILHist:
+        Ex3ML.experimentPIL(fileNames, labels, folds=args.folds, KNN=args.KNN, MLP=args.MLP, RF=args.RF, SVM=args.SVM)
+    if args.openCVHist:
+        Ex3ML.experimentCVHist(fileNames, labels, folds=args.folds, KNN=args.KNN, MLP=args.MLP, RF=args.RF, SVM=args.SVM)
+    if args.BOVW:
+        Ex3ML.experimentVisualBagOfWords(fileNames, labels)

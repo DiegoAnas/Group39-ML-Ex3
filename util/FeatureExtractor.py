@@ -13,16 +13,14 @@ class FeatureExtractor:
     def __init__(self, imagePath: str, fileName:str):
         # the easiest way would to do the following:
         # imageOpenCV = cv2.imread(imagePath + fileName)
-
         # However, we have the same issue as before, and it is more difficult in OpenCV to convert to an RGB image
         # Thus we do this using PIL, and then convert to OpenCV ....
-        #self.imagePIL = Image.open(imagePath + fileName)
+        # self.imagePIL = Image.open(imagePath + fileName)
         self.imagePIL = Image.open(fileName)
         self.imagePIL = self.imagePIL.convert('RGB')
         self.imageOpenCV = np.array(self.imagePIL)
         # Convert RGB to BGR
         self.imageOpenCV = self.imageOpenCV[:, :, ::-1].copy()
-
         # Now we split the image in the three channels, B / G / R
         self.chans = cv2.split(self.imageOpenCV)
         self.colors = ("b", "g", "r")
@@ -74,5 +72,4 @@ class FeatureExtractor:
         gray = cv2.cvtColor(self.imageOpenCV, cv2.COLOR_BGR2GRAY)
         sift = cv2.xfeatures2d.SIFT_create()
         siftKeypoints, descriptors = sift.detectAndCompute(gray)
-
-        return Tuple(siftKeypoints, descriptors)
+        return siftKeypoints, descriptors

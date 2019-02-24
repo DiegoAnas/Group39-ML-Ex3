@@ -1,0 +1,1989 @@
+C:\Users\Diego\PycharmProjects\MLEx3\venv\Scripts\python.exe C:/Users/Diego/PycharmProjects/MLEx3/main.py FIDS30
+Found 971 files
+
+Found the following classes: ['acerolas', 'apples', 'apricots', 'avocados', 'bananas', 'blackberries', 'blueberries', 'cantaloupes', 'cherries', 'coconuts', 'figs', 'grapefruits', 'grapes', 'guava', 'kiwifruit', 'lemons', 'limes', 'mangos', 'olives', 'oranges', 'passionfruit', 'peaches', 'pears', 'pineapples', 'plums', 'pomegranates', 'raspberries', 'strawberries', 'tomatoes', 'watermelons']
+Transformed labels (first elements: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2
+ 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+ 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+ 4 4]
+... done label encoding
+Loading feature vectors from disk
+<class 'list'>
+Set 0: 
+
+Classifier Linear
+
+Time to build model: 2.0144756722405712
+Time to make predictions: 0.040630584898583955
+Overall F1 score: 0.2822966507177033 
+
+Per class F1 score: 
+ [0.         0.26666667 0.16666667 0.         0.52631579 0.25
+ 0.5        0.46153846 0.47058824 0.375      0.15384615 0.53333333
+ 0.         0.33333333 0.57142857 0.16666667 0.36363636 0.11111111
+ 0.30769231 0.14285714 0.         0.33333333 0.         0.5
+ 0.26666667 0.28571429 0.44444444 0.42105263 0.         0.        ]
+
+Classifier Linear
+
+Time to build model: 2.022786279308756
+Time to make predictions: 0.04111297901029598
+Overall F1 score: 0.2822966507177033 
+
+Per class F1 score: 
+ [0.         0.26666667 0.16666667 0.         0.52631579 0.25
+ 0.5        0.46153846 0.47058824 0.375      0.15384615 0.53333333
+ 0.         0.33333333 0.57142857 0.16666667 0.36363636 0.11111111
+ 0.30769231 0.14285714 0.         0.33333333 0.         0.5
+ 0.26666667 0.28571429 0.44444444 0.42105263 0.         0.        ]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 2.1904597156013015
+Time to make predictions: 0.04061048514392951
+Overall F1 score: 0.18660287081339716 
+
+Per class F1 score: 
+ [0.         0.34782609 0.16666667 0.         0.35714286 0.
+ 0.5        0.26666667 0.36363636 0.11764706 0.         0.42857143
+ 0.         0.15384615 0.54545455 0.35294118 0.25       0.
+ 0.         0.125      0.         0.         0.         0.28571429
+ 0.         0.25       0.11764706 0.         0.18181818 0.10526316]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.40233122941646116
+Time to make predictions: 0.05443569511152635
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04784688995215311 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.3996652321714107
+Time to make predictions: 0.05433904522744193
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04784688995215311 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+Classifier rbf 2.0
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.41171182767924375
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to make predictions: 0.05536969222143728
+Overall F1 score: 0.04784688995215311 
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.40532224397082217
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Time to make predictions: 0.05503098997278855
+Overall F1 score: 0.04784688995215311 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+<class 'list'>
+Set 0: 
+
+Classifier Linear
+
+Time to build model: 2.102061422284299
+Time to make predictions: 0.03823229927935934
+Overall F1 score: 0.3417085427135678 
+
+Per class F1 score: 
+ [0.125      0.25       0.16666667 0.18181818 0.5        0.625
+ 0.92307692 0.6        0.54545455 0.42857143 0.         0.66666667
+ 0.14285714 0.42105263 0.28571429 0.         0.18181818 0.13333333
+ 0.22222222 0.61538462 0.2        0.23529412 0.46153846 0.46153846
+ 0.28571429 0.44444444 0.18181818 0.14285714 0.18181818 0.36363636]
+
+Classifier Linear
+
+Time to build model: 2.093925725847045
+Time to make predictions: 0.03797784493851708
+Overall F1 score: 0.3417085427135678 
+
+Per class F1 score: 
+ [0.125      0.25       0.16666667 0.18181818 0.5        0.625
+ 0.92307692 0.6        0.54545455 0.42857143 0.         0.66666667
+ 0.14285714 0.42105263 0.28571429 0.         0.18181818 0.13333333
+ 0.22222222 0.61538462 0.2        0.23529412 0.46153846 0.46153846
+ 0.28571429 0.44444444 0.18181818 0.14285714 0.18181818 0.36363636]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.674547766211628
+Time to make predictions: 0.0388784850087891
+Overall F1 score: 0.24623115577889448 
+
+Per class F1 score: 
+ [0.18181818 0.07142857 0.36363636 0.         0.4137931  0.36363636
+ 0.83333333 0.25       0.30769231 0.30769231 0.         0.4
+ 0.         0.46153846 0.36363636 0.28571429 0.14285714 0.18181818
+ 0.30769231 0.5        0.         0.11764706 0.16666667 0.25
+ 0.44444444 0.18181818 0.         0.21052632 0.08695652 0.26666667]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.4083406284038613
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to make predictions: 0.05295301746497749
+Overall F1 score: 0.045226130653266326 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.4055959427576088
+Time to make predictions: 0.05242272606557563
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.045226130653266326 
+
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+Classifier rbf 2.0
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.4254254198603533
+Time to make predictions: 0.05148915661001752
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.045226130653266326 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.4113094049317958
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Time to make predictions: 0.05199849294605485
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.045226130653266326 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+<class 'list'>
+Set 0: 
+
+Classifier Linear
+
+Time to build model: 2.247031116558478
+Time to make predictions: 0.03682959299707633
+Overall F1 score: 0.22797927461139897 
+
+Per class F1 score: 
+ [0.         0.         0.28571429 0.28571429 0.52631579 0.7
+ 0.66666667 0.16666667 0.14285714 0.5        0.13333333 0.42857143
+ 0.         0.         0.30769231 0.16666667 0.25       0.
+ 0.         0.15384615 0.         0.         0.         0.30769231
+ 0.18181818 0.35294118 0.16666667 0.14285714 0.21052632 0.18181818]
+
+Classifier Linear
+
+Time to build model: 2.202777443969797
+Time to make predictions: 0.0368466991712495
+Overall F1 score: 0.22797927461139897 
+
+Per class F1 score: 
+ [0.         0.         0.28571429 0.28571429 0.52631579 0.7
+ 0.66666667 0.16666667 0.14285714 0.5        0.13333333 0.42857143
+ 0.         0.         0.30769231 0.16666667 0.25       0.
+ 0.         0.15384615 0.         0.         0.         0.30769231
+ 0.18181818 0.35294118 0.16666667 0.14285714 0.21052632 0.18181818]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.824998278691222
+Time to make predictions: 0.037513839964042006
+Overall F1 score: 0.15544041450777202 
+
+Per class F1 score: 
+ [0.44444444 0.         0.14285714 0.         0.11111111 0.2
+ 0.46153846 0.         0.23529412 0.22222222 0.28571429 0.4
+ 0.         0.         0.         0.25       0.25       0.
+ 0.21052632 0.16666667 0.         0.33333333 0.         0.18181818
+ 0.25       0.14285714 0.         0.25       0.16       0.2       ]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.4169830952510267
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to make predictions: 0.051134631150258514
+Overall F1 score: 0.04663212435233161 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.41847389833030846
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to make predictions: 0.05026520984785421
+Overall F1 score: 0.04663212435233161 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+Classifier rbf 2.0
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.4300192829348397
+Time to make predictions: 0.05068687704124741
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04663212435233161 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.4308724533717765
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to make predictions: 0.051175258313922
+Overall F1 score: 0.04663212435233161 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+<class 'list'>
+Set 0: 
+
+Classifier Linear
+
+Time to build model: 2.266699795623982
+Time to make predictions: 0.03715845919557381
+Overall F1 score: 0.2553191489361702 
+
+Per class F1 score: 
+ [0.         0.13333333 0.15384615 0.4        0.4        0.57142857
+ 0.42105263 0.44444444 0.55555556 0.2        0.13333333 0.11764706
+ 0.         0.14285714 0.26666667 0.         0.4        0.26666667
+ 0.         0.18181818 0.4        0.36363636 0.26666667 0.14285714
+ 0.5        0.72727273 0.         0.         0.21052632 0.        ]
+
+Classifier Linear
+
+Time to build model: 2.2634077124041596
+Time to make predictions: 0.03648062704391819
+Overall F1 score: 0.2553191489361702 
+
+Per class F1 score: 
+ [0.         0.13333333 0.15384615 0.4        0.4        0.57142857
+ 0.42105263 0.44444444 0.55555556 0.2        0.13333333 0.11764706
+ 0.         0.14285714 0.26666667 0.         0.4        0.26666667
+ 0.         0.18181818 0.4        0.36363636 0.26666667 0.14285714
+ 0.5        0.72727273 0.         0.         0.21052632 0.        ]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 2.1765819041481187
+Time to make predictions: 0.040155888565251985
+Overall F1 score: 0.19148936170212763 
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.08695652 0.14285714 0.22222222 0.36363636 0.18181818
+ 0.5        0.66666667 0.5        0.         0.         0.
+ 0.         0.14285714 0.18181818 0.         0.28571429 0.2
+ 0.         0.         0.         0.         0.         0.2
+ 0.         0.54545455 0.3        0.25       0.45454545 0.18181818]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.4438269590739061
+Time to make predictions: 0.06266547550674062
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04787234042553191 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+  'precision', 'predicted', average, warn_for)
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.44915382171175366
+Time to make predictions: 0.0501014182301418
+Overall F1 score: 0.04787234042553191 
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+Classifier rbf 2.0
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.43689425433545637
+Time to make predictions: 0.05170982625686804
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04787234042553191 
+
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.42618578930239437
+Time to make predictions: 0.05080747556917942
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04787234042553191 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+<class 'list'>
+Set 0: 
+
+Classifier Linear
+
+Time to build model: 2.624516910949957
+Time to make predictions: 0.035982837375449606
+Overall F1 score: 0.3131868131868132 
+
+Per class F1 score: 
+ [0.         0.28571429 0.18181818 0.44444444 0.35294118 0.625
+ 0.4        0.46153846 0.4        0.         0.36363636 0.16666667
+ 0.15384615 0.36363636 0.66666667 0.57142857 0.33333333 0.
+ 0.28571429 0.46153846 0.25       0.33333333 0.2        0.46153846
+ 0.18181818 0.25       0.13333333 0.30769231 0.15384615 0.13333333]
+
+Classifier Linear
+
+Time to build model: 2.86602872041113
+Time to make predictions: 0.039578127532514884
+Overall F1 score: 0.3131868131868132 
+
+Per class F1 score: 
+ [0.         0.28571429 0.18181818 0.44444444 0.35294118 0.625
+ 0.4        0.46153846 0.4        0.         0.36363636 0.16666667
+ 0.15384615 0.36363636 0.66666667 0.57142857 0.33333333 0.
+ 0.28571429 0.46153846 0.25       0.33333333 0.2        0.46153846
+ 0.18181818 0.25       0.13333333 0.30769231 0.15384615 0.13333333]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 2.9528724901500567
+Time to make predictions: 0.03593836132260009
+Overall F1 score: 0.19230769230769232 
+
+Per class F1 score: 
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+ [0.         0.05882353 0.         0.         0.35714286 0.22222222
+ 0.4        0.4        0.44444444 0.33333333 0.28571429 0.36363636
+ 0.         0.         0.25       0.28571429 0.         0.
+ 0.10526316 0.55555556 0.         0.2        0.4        0.16666667
+ 0.18181818 0.22222222 0.         0.         0.09090909 0.14285714]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.43296881501682094
+Time to make predictions: 0.0486888758977031
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04945054945054945 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.4242468044597487
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Time to make predictions: 0.048711969232833496
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04945054945054945 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+
+Classifier rbf 2.0
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.46382835322710037
+Time to make predictions: 0.04998894513494179
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04945054945054945 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.43448527735736775
+Time to make predictions: 0.048365141551457214
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04945054945054945 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+
+<class 'list'>
+Set 1: 
+
+Classifier Linear
+
+Time to build model: 0.8898041642415038
+Time to make predictions: 0.15295100748950574
+Overall F1 score: 0.35406698564593303 
+
+Per class F1 score: 
+ [0.         0.2        0.33333333 0.         0.44444444 0.15384615
+ 0.76923077 0.36363636 0.32       0.33333333 0.36363636 0.71428571
+ 0.         0.5        0.28571429 0.         0.76923077 0.22222222
+ 0.28571429 0.625      0.4        0.36363636 0.57142857 0.58823529
+ 0.30769231 0.31578947 0.30769231 0.15384615 0.3        0.375     ]
+
+Classifier Linear
+
+Time to build model: 0.8891750846862578
+Time to make predictions: 0.15260118622764907
+Overall F1 score: 0.35406698564593303 
+
+Per class F1 score: 
+ [0.         0.2        0.33333333 0.         0.44444444 0.15384615
+ 0.76923077 0.36363636 0.32       0.33333333 0.36363636 0.71428571
+ 0.         0.5        0.28571429 0.         0.76923077 0.22222222
+ 0.28571429 0.625      0.4        0.36363636 0.57142857 0.58823529
+ 0.30769231 0.31578947 0.30769231 0.15384615 0.3        0.375     ]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.0341866890871572
+Time to make predictions: 0.1528073156264469
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.2679425837320574 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.2        0.30769231 0.         0.41666667 0.13333333
+ 0.76923077 0.53333333 0.125      0.16666667 0.         0.76923077
+ 0.         0.4        0.         0.4        0.44444444 0.
+ 0.15384615 0.2        0.         0.         0.375      0.44444444
+ 0.33333333 0.42857143 0.10526316 0.23529412 0.18181818 0.22222222]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.2657692197489112
+Time to make predictions: 0.18437077290398918
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04784688995215311 
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.2615978791765272
+Time to make predictions: 0.18514140605054052
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04784688995215311 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+Classifier rbf 2.0
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.283966340181081
+Time to make predictions: 0.18546043619888763
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04784688995215311 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.294005953803918
+Time to make predictions: 0.18849635446045454
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04784688995215311 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+<class 'list'>
+Set 1: 
+
+Classifier Linear
+
+Time to build model: 0.926138961150599
+Time to make predictions: 0.1425842382855862
+Overall F1 score: 0.4371859296482412 
+
+Per class F1 score: 
+ [0.30769231 0.14285714 0.33333333 0.22222222 0.66666667 0.6
+ 0.8        0.72727273 0.5        0.66666667 0.36363636 0.66666667
+ 0.42105263 0.61538462 0.5        0.22222222 0.25       0.14285714
+ 0.28571429 0.36363636 0.54545455 0.33333333 0.57142857 0.33333333
+ 0.4        0.72727273 0.2        0.28571429 0.23529412 0.36363636]
+
+Classifier Linear
+
+Time to build model: 1.014692492998229
+Time to make predictions: 0.14515016441171724
+Overall F1 score: 0.4371859296482412 
+
+Per class F1 score: 
+ [0.30769231 0.14285714 0.33333333 0.22222222 0.66666667 0.6
+ 0.8        0.72727273 0.5        0.66666667 0.36363636 0.66666667
+ 0.42105263 0.61538462 0.5        0.22222222 0.25       0.14285714
+ 0.28571429 0.36363636 0.54545455 0.33333333 0.57142857 0.33333333
+ 0.4        0.72727273 0.2        0.28571429 0.23529412 0.36363636]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.081501083889961
+Time to make predictions: 0.14793034536938166
+Overall F1 score: 0.3165829145728643 
+
+Per class F1 score: 
+ [0.2        0.25       0.         0.15384615 0.41666667 0.16666667
+ 0.85714286 0.30769231 0.43478261 0.22222222 0.28571429 0.83333333
+ 0.         0.36363636 0.33333333 0.25       0.16666667 0.
+ 0.19047619 0.71428571 0.5        0.33333333 0.         0.26666667
+ 0.25       0.61538462 0.         0.47058824 0.21052632 0.4       ]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.290752359475988
+Time to make predictions: 0.18138232427575218
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.045226130653266326 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.2983539156246522
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Time to make predictions: 0.18121083487966416
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.045226130653266326 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+Classifier rbf 2.0
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.3167430528619235
+Time to make predictions: 0.17792046227724967
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.045226130653266326 
+
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.3089725732432953
+Time to make predictions: 0.18141311538926885
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.045226130653266326 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+<class 'list'>
+Set 1: 
+
+Classifier Linear
+
+Time to build model: 1.0124400375138407
+Time to make predictions: 0.1409749749501472
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.40932642487046633 
+
+Per class F1 score: 
+ [0.2        0.         0.5        0.33333333 0.5        0.47058824
+ 0.46153846 0.72727273 0.26666667 0.66666667 0.14285714 0.54545455
+ 0.45454545 0.         0.44444444 0.33333333 0.44444444 0.36363636
+ 0.13333333 0.625      0.4        0.57142857 0.61538462 0.55555556
+ 0.66666667 0.46153846 0.42857143 0.35294118 0.35714286 0.22222222]
+
+Classifier Linear
+
+Time to build model: 1.0104279237766036
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to make predictions: 0.14018851859248116
+Overall F1 score: 0.40932642487046633 
+
+Per class F1 score: 
+ [0.2        0.         0.5        0.33333333 0.5        0.47058824
+ 0.46153846 0.72727273 0.26666667 0.66666667 0.14285714 0.54545455
+ 0.45454545 0.         0.44444444 0.33333333 0.44444444 0.36363636
+ 0.13333333 0.625      0.4        0.57142857 0.61538462 0.55555556
+ 0.66666667 0.46153846 0.42857143 0.35294118 0.35714286 0.22222222]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.0509888010154214
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to make predictions: 0.140014463270262
+Overall F1 score: 0.2538860103626943 
+
+Per class F1 score: 
+ [0.54545455 0.13793103 0.11111111 0.25       0.52631579 0.5
+ 0.30769231 0.47058824 0.25       0.57142857 0.28571429 0.46153846
+ 0.13333333 0.28571429 0.         0.25       0.         0.
+ 0.14285714 0.5        0.         0.33333333 0.         0.2
+ 0.4        0.25       0.         0.11764706 0.32       0.        ]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.3279180887955846
+Time to make predictions: 0.17424605606463217
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04663212435233161 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.3069442086405871
+Time to make predictions: 0.1749850427889612
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04663212435233161 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+  'precision', 'predicted', average, warn_for)
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+Classifier rbf 2.0
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.324398921113584
+Time to make predictions: 0.17556750801958287
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04663212435233161 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+  'precision', 'predicted', average, warn_for)
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.3162991476421126
+Time to make predictions: 0.17544391591118824
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04663212435233161 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+<class 'list'>
+Set 1: 
+
+Classifier Linear
+
+Time to build model: 0.9359737283377001
+Time to make predictions: 0.1425885148291286
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.2872340425531915 
+
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.2        0.6        0.35294118 0.66666667
+ 0.47619048 0.5        0.42857143 0.54545455 0.18181818 0.14285714
+ 0.         0.22222222 0.30769231 0.         0.22222222 0.13333333
+ 0.         0.71428571 0.33333333 0.33333333 0.         0.16666667
+ 0.         0.46153846 0.33333333 0.35294118 0.42105263 0.2       ]
+
+Classifier Linear
+
+Time to build model: 0.9324370268271878
+Time to make predictions: 0.13500320954592837
+Overall F1 score: 0.2872340425531915 
+
+Per class F1 score: 
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+ [0.         0.         0.2        0.6        0.35294118 0.66666667
+ 0.47619048 0.5        0.42857143 0.54545455 0.18181818 0.14285714
+  'precision', 'predicted', average, warn_for)
+ 0.         0.22222222 0.30769231 0.         0.22222222 0.13333333
+ 0.         0.71428571 0.33333333 0.33333333 0.         0.16666667
+ 0.         0.46153846 0.33333333 0.35294118 0.42105263 0.2       ]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.0960186662572653
+Time to make predictions: 0.1408077620975945
+Overall F1 score: 0.26595744680851063 
+
+Per class F1 score: 
+ [0.2        0.06060606 0.22222222 0.33333333 0.52631579 0.54545455
+ 0.61538462 0.42857143 0.42857143 0.         0.         0.
+ 0.18181818 0.         0.16666667 0.22222222 0.25       0.11764706
+ 0.         0.5        0.33333333 0.44444444 0.         0.125
+ 0.         0.54545455 0.25       0.47058824 0.4        0.28571429]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.338439668875779
+Time to make predictions: 0.17344890834810656
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04787234042553191 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.3169427674454113
+Time to make predictions: 0.17412674049975863
+Overall F1 score: 0.04787234042553191 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+
+Classifier rbf 2.0
+  'precision', 'predicted', average, warn_for)
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.3823914174902967
+Time to make predictions: 0.18072459187875722
+Overall F1 score: 0.04787234042553191 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.3542970923352726
+Time to make predictions: 0.1762025747358109
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04787234042553191 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+<class 'list'>
+Set 1: 
+
+Classifier Linear
+
+Time to build model: 0.9673443135014423
+Time to make predictions: 0.13897697380659224
+Overall F1 score: 0.3956043956043956 
+
+Per class F1 score: 
+ [0.         0.         0.16666667 0.66666667 0.36363636 0.71428571
+ 0.57142857 0.61538462 0.47619048 0.66666667 0.36363636 0.30769231
+ 0.         0.2        0.57142857 0.57142857 0.4        0.4
+ 0.375      0.61538462 0.57142857 0.22222222 0.42857143 0.6
+ 0.61538462 0.44444444 0.30769231 0.         0.38095238 0.        ]
+
+Classifier Linear
+
+Time to build model: 1.0126696879021324
+Time to make predictions: 0.1332998622525281
+Overall F1 score: 0.3956043956043956 
+
+Per class F1 score: 
+ [0.         0.         0.16666667 0.66666667 0.36363636 0.71428571
+ 0.57142857 0.61538462 0.47619048 0.66666667 0.36363636 0.30769231
+ 0.         0.2        0.57142857 0.57142857 0.4        0.4
+ 0.375      0.61538462 0.57142857 0.22222222 0.42857143 0.6
+ 0.61538462 0.44444444 0.30769231 0.         0.38095238 0.        ]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.1468556499768852
+Time to make predictions: 0.14323812179340223
+Overall F1 score: 0.21978021978021978 
+
+Per class F1 score: 
+ [0.         0.05555556 0.18181818 0.14285714 0.4        0.
+ 0.6        0.30769231 0.38095238 0.         0.25       0.
+ 0.         0.33333333 0.44444444 0.6        0.         0.
+ 0.125      0.63157895 0.         0.16666667 0.28571429 0.11764706
+ 0.2        0.33333333 0.14285714 0.         0.27272727 0.        ]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.3927971032404685
+Time to make predictions: 0.1670409355024418
+Overall F1 score: 0.04945054945054945 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+
+  'precision', 'predicted', average, warn_for)
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.4365209120840916
+Time to make predictions: 0.17605759990968295
+Overall F1 score: 0.04945054945054945 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+
+Classifier rbf 2.0
+  'precision', 'predicted', average, warn_for)
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.4216252832675593
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Time to make predictions: 0.17195425637963524
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04945054945054945 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.531972081013123
+Time to make predictions: 0.1850366307337339
+Overall F1 score: 0.04945054945054945 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+<class 'list'>
+Set 2: 
+
+Classifier Linear
+
+Time to build model: 0.7362813828802217
+Time to make predictions: 0.08904405139207938
+Overall F1 score: 0.36363636363636365 
+
+Per class F1 score: 
+ [0.         0.11111111 0.         0.         0.5        0.16666667
+ 0.83333333 0.28571429 0.35714286 0.46153846 0.26666667 0.8
+ 0.         0.6        0.33333333 0.30769231 0.76923077 0.28571429
+ 0.25       0.66666667 0.28571429 0.44444444 0.33333333 0.42105263
+ 0.18181818 0.375      0.33333333 0.31578947 0.6        0.        ]
+
+Classifier Linear
+
+Time to build model: 0.6440564384004546
+Time to make predictions: 0.08776194363771594
+Overall F1 score: 0.36363636363636365 
+
+Per class F1 score: 
+ [0.         0.11111111 0.         0.         0.5        0.16666667
+ 0.83333333 0.28571429 0.35714286 0.46153846 0.26666667 0.8
+ 0.         0.6        0.33333333 0.30769231 0.76923077 0.28571429
+ 0.25       0.66666667 0.28571429 0.44444444 0.33333333 0.42105263
+ 0.18181818 0.375      0.33333333 0.31578947 0.6        0.        ]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.713597740616521
+Time to make predictions: 0.09125844563892826
+Overall F1 score: 0.2583732057416268 
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+
+  "avoid this warning.", FutureWarning)
+Per class F1 score: 
+ [0.         0.27272727 0.16666667 0.         0.33333333 0.21052632
+ 0.66666667 0.4        0.19047619 0.2        0.         0.61538462
+ 0.         0.5        0.         0.26666667 0.4        0.
+ 0.25       0.46153846 0.28571429 0.         0.35294118 0.53333333
+ 0.33333333 0.42857143 0.08333333 0.2        0.15384615 0.33333333]
+
+Classifier rbf def
+
+Time to build model: 0.8693468905465807
+Time to make predictions: 0.11938014067261804
+Overall F1 score: 0.04784688995215311 
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+Classifier rbf 0.5
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.8718610704958252
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Time to make predictions: 0.12289032761317742
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04784688995215311 
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+Per class F1 score: 
+  "avoid this warning.", FutureWarning)
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+Classifier rbf 2.0
+
+Time to build model: 0.8743637037775045
+Time to make predictions: 0.11854493171857428
+Overall F1 score: 0.04784688995215311 
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+ 0.0913242 0.       ]
+  "avoid this warning.", FutureWarning)
+
+Classifier rbf ovo
+
+Time to build model: 0.8710912926579795
+Time to make predictions: 0.12159710084560515
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04784688995215311 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.        0.        0.        0.        0.        0.        0.
+ 0.0913242 0.       ]
+
+<class 'list'>
+Set 2: 
+
+Classifier Linear
+
+Time to build model: 0.6338573097034299
+Time to make predictions: 0.13037256819697518
+Overall F1 score: 0.4623115577889447 
+
+Per class F1 score: 
+ [0.5        0.42105263 0.375      0.2        0.6        0.56
+ 0.61538462 0.25       0.5        0.46153846 0.2        0.53333333
+ 0.58823529 0.61538462 0.42857143 0.         0.36363636 0.16666667
+ 0.30769231 0.5        0.8        0.66666667 0.46153846 0.54545455
+ 0.5        0.57142857 0.28571429 0.375      0.53333333 0.6       ]
+
+Classifier Linear
+
+Time to build model: 0.6860978550140544
+Time to make predictions: 0.08657734107616477
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+Overall F1 score: 0.4623115577889447 
+  "avoid this warning.", FutureWarning)
+
+Per class F1 score: 
+ [0.5        0.42105263 0.375      0.2        0.6        0.56
+ 0.61538462 0.25       0.5        0.46153846 0.2        0.53333333
+ 0.58823529 0.61538462 0.42857143 0.         0.36363636 0.16666667
+ 0.30769231 0.5        0.8        0.66666667 0.46153846 0.54545455
+ 0.5        0.57142857 0.28571429 0.375      0.53333333 0.6       ]
+
+Classifier 3rd
+
+Time to build model: 0.6944135939344847
+Time to make predictions: 0.08212759751909005
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Overall F1 score: 0.32663316582914576 
+
+Per class F1 score: 
+ [0.2        0.11111111 0.         0.25       0.41666667 0.57142857
+ 0.85714286 0.36363636 0.31578947 0.46153846 0.28571429 0.54545455
+ 0.13333333 0.46153846 0.         0.         0.28571429 0.
+ 0.21052632 0.5        0.72727273 0.44444444 0.2        0.30769231
+ 0.25       0.5        0.10526316 0.375      0.31578947 0.44444444]
+
+Classifier rbf def
+
+Time to build model: 0.8708684847393613
+Time to make predictions: 0.11572241297982089
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.045226130653266326 
+  'precision', 'predicted', average, warn_for)
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+Per class F1 score: 
+  "avoid this warning.", FutureWarning)
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+Classifier rbf 0.5
+
+Time to build model: 0.9195958495289602
+Time to make predictions: 0.13670185264142276
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.045226130653266326 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+ 0.         0.         0.         0.         0.         0.
+  "avoid this warning.", FutureWarning)
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+Classifier rbf 2.0
+
+Time to build model: 0.8978367959793587
+Time to make predictions: 0.11837429763117768
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.045226130653266326 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 1.0193620508934345
+Time to make predictions: 0.13054747882789286
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.045226130653266326 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08653846 0.        ]
+
+<class 'list'>
+Set 2: 
+
+Classifier Linear
+
+Time to build model: 0.7488911991727463
+Time to make predictions: 0.07804991325032518
+Overall F1 score: 0.43005181347150256 
+
+Per class F1 score: 
+ [0.2        0.23529412 0.30769231 0.25       0.22222222 0.5
+ 0.61538462 0.54545455 0.54545455 0.6        0.30769231 0.8
+ 0.125      0.2        0.72727273 0.30769231 0.76923077 0.15384615
+ 0.42857143 0.33333333 0.33333333 0.75       0.44444444 0.52631579
+ 0.46153846 0.5        0.53333333 0.70588235 0.45454545 0.15384615]
+
+Classifier Linear
+
+Time to build model: 0.7026271234642394
+Time to make predictions: 0.08081940284911582
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Overall F1 score: 0.43005181347150256 
+
+Per class F1 score: 
+ [0.2        0.23529412 0.30769231 0.25       0.22222222 0.5
+ 0.61538462 0.54545455 0.54545455 0.6        0.30769231 0.8
+ 0.125      0.2        0.72727273 0.30769231 0.76923077 0.15384615
+ 0.42857143 0.33333333 0.33333333 0.75       0.44444444 0.52631579
+ 0.46153846 0.5        0.53333333 0.70588235 0.45454545 0.15384615]
+
+Classifier 3rd
+
+Time to build model: 0.6962631990170678
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to make predictions: 0.07792118928965408
+Overall F1 score: 0.32642487046632124 
+
+Per class F1 score: 
+ [0.30769231 0.16666667 0.26666667 0.21052632 0.41666667 0.66666667
+ 0.4        0.4        0.35294118 0.5        0.28571429 0.54545455
+ 0.         0.44444444 0.4        0.44444444 0.28571429 0.18181818
+ 0.28571429 0.4        0.         0.57142857 0.         0.4
+ 0.46153846 0.36363636 0.13333333 0.28571429 0.42105263 0.        ]
+
+Classifier rbf def
+
+Time to build model: 0.8772195795558986
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Time to make predictions: 0.10868279465277908
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04663212435233161 
+
+Per class F1 score: 
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+ [0.         0.         0.         0.         0.         0.
+  "avoid this warning.", FutureWarning)
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+Classifier rbf 0.5
+
+Time to build model: 0.8764019044303808
+Time to make predictions: 0.10979555128281504
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04663212435233161 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+Classifier rbf 2.0
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.8988516197622545
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to make predictions: 0.10939056260923508
+Overall F1 score: 0.04663212435233161 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.8775745326700104
+Time to make predictions: 0.10997987030954448
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04663212435233161 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08910891 0.        ]
+
+<class 'list'>
+Set 2: 
+
+Classifier Linear
+
+Time to build model: 0.6155746584003907
+Time to make predictions: 0.07521199895481345
+Overall F1 score: 0.35638297872340424 
+
+Per class F1 score: 
+ [0.         0.         0.15384615 0.2        0.47058824 0.71428571
+ 0.55555556 0.66666667 0.5        0.66666667 0.4        0.15384615
+ 0.4        0.         0.28571429 0.16666667 0.5        0.15384615
+ 0.13333333 0.71428571 0.5        0.54545455 0.14285714 0.26666667
+ 0.44444444 0.46153846 0.33333333 0.23529412 0.36363636 0.5       ]
+
+Classifier Linear
+
+Time to build model: 0.6184694507250299
+Time to make predictions: 0.07688070624550392
+Overall F1 score: 0.35638297872340424 
+
+Per class F1 score: 
+ [0.         0.         0.15384615 0.2        0.47058824 0.71428571
+ 0.55555556 0.66666667 0.5        0.66666667 0.4        0.15384615
+ 0.4        0.         0.28571429 0.16666667 0.5        0.15384615
+ 0.13333333 0.71428571 0.5        0.54545455 0.14285714 0.26666667
+ 0.44444444 0.46153846 0.33333333 0.23529412 0.36363636 0.5       ]
+
+Classifier 3rd
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.6803912353095285
+Time to make predictions: 0.07696196057283089
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.2712765957446808 
+
+Per class F1 score: 
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+ [0.         0.08695652 0.26666667 0.13333333 0.5        0.6
+ 0.71428571 0.4        0.25       0.6        0.         0.
+ 0.2        0.         0.16666667 0.22222222 0.25       0.11111111
+ 0.125      0.5        0.33333333 0.25       0.         0.22222222
+ 0.         0.33333333 0.4        0.42105263 0.53333333 0.        ]
+
+Classifier rbf def
+
+Time to build model: 0.892960253376657
+Time to make predictions: 0.10584188677680118
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04787234042553191 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+  'precision', 'predicted', average, warn_for)
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+Classifier rbf 0.5
+  "avoid this warning.", FutureWarning)
+
+Time to build model: 0.8880157137315905
+Time to make predictions: 0.10843945932515453
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04787234042553191 
+
+Per class F1 score: 
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+ [0.         0.         0.         0.         0.         0.
+  "avoid this warning.", FutureWarning)
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+Classifier rbf 2.0
+
+Time to build model: 0.8980548997000852
+Time to make predictions: 0.10725058022005385
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04787234042553191 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+Classifier rbf ovo
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.8833701044802353
+Time to make predictions: 0.10713596885308618
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04787234042553191 
+
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09137056 0.        ]
+
+<class 'list'>
+Set 2: 
+
+Classifier Linear
+
+Time to build model: 0.7520554137406208
+Time to make predictions: 0.0748878369542183
+Overall F1 score: 0.42857142857142855 
+
+Per class F1 score: 
+ [0.         0.23529412 0.54545455 0.5        0.53333333 0.75
+ 0.5        0.5        0.53333333 0.5        0.44444444 0.28571429
+ 0.23529412 0.61538462 0.5        0.54545455 0.         0.
+ 0.36363636 0.61538462 0.5        0.36363636 0.54545455 0.53333333
+ 0.33333333 0.44444444 0.53333333 0.30769231 0.4        0.18181818]
+
+Classifier Linear
+
+Time to build model: 0.7412002632640196
+Time to make predictions: 0.07450765223319422
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Overall F1 score: 0.42857142857142855 
+
+Per class F1 score: 
+ [0.         0.23529412 0.54545455 0.5        0.53333333 0.75
+ 0.5        0.5        0.53333333 0.5        0.44444444 0.28571429
+ 0.23529412 0.61538462 0.5        0.54545455 0.         0.
+ 0.36363636 0.61538462 0.5        0.36363636 0.54545455 0.53333333
+ 0.33333333 0.44444444 0.53333333 0.30769231 0.4        0.18181818]
+
+Classifier 3rd
+
+Time to build model: 0.6630186324725713
+Time to make predictions: 0.07458377470825894
+Overall F1 score: 0.2857142857142857 
+
+Per class F1 score: 
+ [0.         0.14814815 0.15384615 0.27272727 0.23529412 0.57142857
+ 0.72727273 0.36363636 0.43478261 0.57142857 0.66666667 0.2
+ 0.         0.44444444 0.5        0.22222222 0.         0.
+ 0.26666667 0.66666667 0.28571429 0.25       0.4        0.2
+ 0.         0.33333333 0.         0.28571429 0.11764706 0.        ]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.9028489050124193
+Time to make predictions: 0.10393754193685822
+Overall F1 score: 0.04945054945054945 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+
+Classifier rbf 0.5
+
+Time to build model: 0.9044051392079098
+Time to make predictions: 0.10279656011944382
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04945054945054945 
+
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+
+Classifier rbf 2.0
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.9172296379863099
+Time to make predictions: 0.10329434978790175
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04945054945054945 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+  'precision', 'predicted', average, warn_for)
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+
+  "avoid this warning.", FutureWarning)
+Classifier rbf ovo
+
+Time to build model: 0.9036071361826856
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Time to make predictions: 0.10312970286148015
+  'precision', 'predicted', average, warn_for)
+Overall F1 score: 0.04945054945054945 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09424084 0.        ]
+
+
+Process finished with exit code 0
+
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\Scripts\python.exe C:/Users/Diego/PycharmProjects/MLEx3/main.py FIDS30
+Found 971 files
+
+Found the following classes: ['acerolas', 'apples', 'apricots', 'avocados', 'bananas', 'blackberries', 'blueberries', 'cantaloupes', 'cherries', 'coconuts', 'figs', 'grapefruits', 'grapes', 'guava', 'kiwifruit', 'lemons', 'limes', 'mangos', 'olives', 'oranges', 'passionfruit', 'peaches', 'pears', 'pineapples', 'plums', 'pomegranates', 'raspberries', 'strawberries', 'tomatoes', 'watermelons']
+Transformed labels (first elements: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2
+ 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+ 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+ 4 4]
+... done label encoding
+Loading feature vectors from disk
+Set 0: 
+
+Classifier Linear
+
+Time to build model: 0.6451858735503052
+Time to make predictions: 0.06717936721695805
+Overall F1 score: 0.2601626016260163 
+
+Per class F1 score: 
+ [0.07692308 0.05       0.12903226 0.14634146 0.37037037 0.28571429
+ 0.59459459 0.36363636 0.40816327 0.37037037 0.13333333 0.5
+ 0.10810811 0.23529412 0.51282051 0.17647059 0.41666667 0.19354839
+ 0.16       0.38709677 0.15384615 0.12121212 0.1        0.34482759
+ 0.33333333 0.27906977 0.18181818 0.22222222 0.11111111 0.16      ]
+
+Time to build model: 0.5600437404873635
+Time to make predictions: 0.06600331774248103
+Overall F1 score: 0.24634655532359082 
+
+Per class F1 score: 
+ [0.12903226 0.05882353 0.14285714 0.1        0.34146341 0.60465116
+ 0.46511628 0.5        0.38297872 0.32       0.06666667 0.2
+ 0.         0.21428571 0.38888889 0.15384615 0.33333333 0.17647059
+ 0.05882353 0.37037037 0.25       0.53846154 0.22222222 0.19354839
+ 0.16666667 0.26086957 0.20512821 0.         0.2        0.08695652]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.1788865334637395
+Time to make predictions: 0.10166498669781143
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.046747967479674794 
+
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08932039 0.        ]
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.20511970686859926
+Time to make predictions: 0.08909152102541262
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04801670146137787 
+
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09163347 0.        ]
+
+Classifier rbf scale
+
+Time to build model: 0.1935362610265332
+Time to make predictions: 0.09729564215936382
+Overall F1 score: 0.0508130081300813 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.12612613 0.08430913 0.        ]
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to build model: 0.2016484364742981
+Time to make predictions: 0.09861581115125828
+Overall F1 score: 0.05010438413361169 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.08163265 0.09263158 0.        ]
+
+Set 1: 
+
+Classifier Linear
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to build model: 0.44252475156489446
+Time to make predictions: 0.26275468420505677
+Overall F1 score: 0.34552845528455284 
+
+Per class F1 score: 
+ [0.17647059 0.17021277 0.1875     0.12121212 0.32653061 0.41025641
+ 0.77419355 0.42424242 0.41666667 0.48275862 0.34482759 0.58064516
+ 0.1875     0.45714286 0.3125     0.26666667 0.5        0.06896552
+ 0.06060606 0.53333333 0.34782609 0.14814815 0.32       0.58823529
+ 0.46153846 0.42105263 0.32258065 0.36363636 0.42857143 0.16      ]
+
+Time to build model: 0.4358281120300451
+Time to make predictions: 0.24387374446027232
+Overall F1 score: 0.33194154488517746 
+
+Per class F1 score: 
+ [0.13333333 0.0952381  0.11428571 0.38095238 0.19354839 0.63157895
+ 0.45833333 0.59259259 0.45       0.64       0.25       0.25806452
+ 0.06896552 0.25       0.51612903 0.125      0.4        0.05714286
+ 0.15384615 0.44444444 0.4        0.47619048 0.31111111 0.48484848
+ 0.38461538 0.48275862 0.4137931  0.27777778 0.44444444 0.09090909]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.5497436853627176
+Time to make predictions: 0.29596118951203376
+Overall F1 score: 0.046747967479674794 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08932039 0.        ]
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.6063672601511243
+Time to make predictions: 0.3033356611985356
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.04801670146137787 
+  'precision', 'predicted', average, warn_for)
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09163347 0.        ]
+
+Classifier rbf scale
+
+Time to build model: 0.5786479878648807
+Time to make predictions: 0.3379243453787888
+Overall F1 score: 0.04878048780487805 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.11627907 0.08444444 0.        ]
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to build model: 0.6170616125904864
+Time to make predictions: 0.3293571456979896
+Overall F1 score: 0.05010438413361169 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.09090909 0.09205021 0.        ]
+
+Set 2: 
+
+Classifier Linear
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to build model: 0.2852420331201193
+Time to make predictions: 0.1417567271099074
+Overall F1 score: 0.39227642276422764 
+
+Per class F1 score: 
+ [0.22222222 0.20833333 0.22857143 0.125      0.5        0.48888889
+ 0.75       0.25806452 0.44       0.4516129  0.26086957 0.70967742
+ 0.25806452 0.52631579 0.4137931  0.19047619 0.60869565 0.08333333
+ 0.20689655 0.62068966 0.35294118 0.38095238 0.21428571 0.59459459
+ 0.5        0.46511628 0.2962963  0.35897436 0.57777778 0.13793103]
+
+Time to build model: 0.3322395360463446
+Time to make predictions: 0.17785674177845046
+Overall F1 score: 0.3235908141962422 
+
+Per class F1 score: 
+ [0.2        0.125      0.27027027 0.20689655 0.31578947 0.6
+ 0.52380952 0.51851852 0.35555556 0.60869565 0.18181818 0.19354839
+ 0.         0.26666667 0.46153846 0.07142857 0.30769231 0.17142857
+ 0.23809524 0.52941176 0.         0.41666667 0.22727273 0.45714286
+ 0.4        0.33333333 0.42857143 0.32432432 0.43137255 0.0952381 ]
+
+Classifier rbf def
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.4035008640756228
+Time to make predictions: 0.21327293713438245
+Overall F1 score: 0.046747967479674794 
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.08932039 0.        ]
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\svm\base.py:196: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+Time to build model: 0.3928411516389634
+Time to make predictions: 0.18123307290608714
+Overall F1 score: 0.04801670146137787 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.09163347 0.        ]
+
+Classifier rbf scale
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to build model: 0.3714631381190987
+Time to make predictions: 0.18322294861690125
+Overall F1 score: 0.0508130081300813 
+
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.08955224 0.09401709 0.        ]
+
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Time to build model: 0.3877802900095233
+Time to make predictions: 0.18428695265053818
+C:\Users\Diego\PycharmProjects\MLEx3\venv\lib\site-packages\sklearn\metrics\classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+Overall F1 score: 0.05010438413361169 
+
+  'precision', 'predicted', average, warn_for)
+Per class F1 score: 
+ [0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.06451613 0.09368635 0.        ]
+
+
+Process finished with exit code 0
+
+
+
