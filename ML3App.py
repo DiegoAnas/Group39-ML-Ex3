@@ -160,10 +160,10 @@ class Ex3ML:
         bag = BagWords.BagOfWords(fileNames, labels)
         bag.run()
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        prog = "MLEX3",
+        prog = "ML3App",
         description="Image classfication experiment",
         epilog = "Application implemented for the 3rd assignment of ML course")
     parser.add_argument('imagePath', action='store',

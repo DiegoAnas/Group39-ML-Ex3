@@ -107,7 +107,7 @@ def experimentCNN(fileNames, labels, colour:bool=True):
     # this applies n_filters convolution filters of size 5x5 resp. 3x3 each in the 2 layers below
 
     # Layer 1
-    model.add(Convolution2D(n_filters, 3, 3, border_mode='valid', input_shape=inputShape))
+    model.add(Convolution2D(n_filters, 5, 5, border_mode='valid', input_shape=inputShape))
     # 3 by 3 is kernel size
     # input shape: 100x100 images with 3 channels -> input_shape should be (3, 100, 100)
     #model.add(BatchNormalization())
@@ -121,7 +121,21 @@ def experimentCNN(fileNames, labels, colour:bool=True):
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Dropout(0.3))
+    #model.add(Flatten())  # Note: Keras does automatic shape inference.
+
+    # Layer 3
+    model.add(Convolution2D(n_filters, 3, 3))  # input_shape is only needed in 1st layer
+    # model.add(BatchNormalization())
+    model.add(Activation('relu'))
+    model.add(Dropout(0.3))
     model.add(Flatten())  # Note: Keras does automatic shape inference.
+
+    # # Layer 4
+    # model.add(Convolution2D(n_filters, 3, 3))  # input_shape is only needed in 1st layer
+    # # model.add(BatchNormalization())
+    # model.add(Activation('relu'))
+    # model.add(Dropout(0.3))
+    # model.add(Flatten())  # Note: Keras does automatic shape inference.
 
     # Full Layer
     model.add(Dense(256))
@@ -137,6 +151,8 @@ def experimentCNN(fileNames, labels, colour:bool=True):
 
     # TRAINING the model
     history = model.fit(trainingImages, trainingLabels, batch_size=32, nb_epoch=epochs)
+    elapsedTimeSeconds = default_timer() - startTimeSeconds
+    print(f"Time train model: {elapsedTimeSeconds}")
     predictions = model.predict_classes(testingImages)
     print(f"Metrics: ")
     print(f"Overall precision: {metrics.precision_score(testingLabels, predictions, average='micro')}")
