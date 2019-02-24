@@ -1,7 +1,7 @@
 import glob, os, platform
 from typing import List, Tuple
 from sklearn import preprocessing
-from util import demoPlot, FeatureExtractor, classifier
+from util import demoPlot, FeatureExtractor, classifier, ConvolutionalNN
 from util.classifiers import BagWords
 import cv2
 import numpy as np
@@ -203,3 +203,5 @@ if __name__ == "__main__":
         Ex3ML.experimentCVHist(fileNames, labels, folds=args.folds, KNN=args.KNN, MLP=args.MLP, RF=args.RF, SVM=args.SVM)
     if args.BOVW:
         Ex3ML.experimentVisualBagOfWords(fileNames, labels)
+    if args.CNN:
+        ConvolutionalNN.experimentCNN(fileNames, labels, colour=True)
